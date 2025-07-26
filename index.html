@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> ha ha ha </title>
+  <title>Black Cyber Security</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -52,7 +51,6 @@
       height: 28px;
       overflow: hidden;
       white-space: nowrap;
-      border-right: 2px solid #25D366;
       margin-bottom: 12px;
       text-align: center;
     }
@@ -86,7 +84,7 @@
     }
 
     .main-content {
-      margin-top: 10px;
+      margin-top: 100px;
       padding: 20px;
     }
 
@@ -129,7 +127,7 @@
       font-size: 14px;
       color: #aaa;
       padding: 20px;
-      background: #0f30 57;
+      background: #0f3 057;
     }
 
     @media (max-width: 768px) {
@@ -181,7 +179,7 @@
         <li style="color: #ff0000;">✔️ Facebook Lock Unlock</li>
         <li style="color: #ff0000;">✔️ YouTube suspend channel back</li>
       </ul>
-      <p2>আরো জানতে আমাদের সাথে যোগাযোগ করুন</p2>
+      <p style="margin-top: 10px;">বিস্তারিত আমাদের সাথে যোগাযোগ করুন </p>
 
       <h2 style="color: #ff6666; margin-top: 30px;">📱 যোগাযোগ করুন</h2>
       <p style="margin-top: 10px;">
@@ -218,34 +216,27 @@
       "I am Mr Shakil Jack",
       "Welcome to my website"
     ];
-    let count = 0;
-    let index = 0;
+    let textIndex = 0;
+    let charIndex = 0;
+    const typingElement = document.getElementById('typingText');
 
-    function typeText() {
-      const typingElement = document.getElementById("typingText");
-      if (count >= texts.length) count = 0;
-
-      let currentText = texts[count];
-      index = 0;
-      typingElement.textContent = "";
-
-      function typeChar() {
-        if (index < currentText.length) {
-          typingElement.textContent += currentText.charAt(index);
-          index++;
-          setTimeout(typeChar, 100);
-        } else {
-          count++;
-          setTimeout(typeText, 1700);
-        }
+    function typeWriter() {
+      if (charIndex < texts[textIndex].length) {
+        typingElement.innerHTML = texts[textIndex].substring(0, charIndex + 1);
+        typingElement.style.textAlign = "center";
+        charIndex++;
+        setTimeout(typeWriter, 100);
+      } else {
+        setTimeout(() => {
+          charIndex = 0;
+          textIndex = (textIndex + 1) % texts.length;
+          typingElement.innerHTML = "";
+          typeWriter();
+        }, 2000);
       }
-
-      typeChar();
     }
 
-    typeText();
+    typeWriter();
   </script>
 </body>
-</html>
-
- 
+          </html>
