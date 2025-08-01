@@ -72,7 +72,7 @@
     .profile-pic {
       width: 200px;
       height: 200px;
-      border-radius: 50%;
+      border-radius: 10%;
       object-fit: cover;
       box-shadow: 0 8px 20px rgba(0, 255, 204, 0.4);
     }
@@ -101,38 +101,17 @@
       backdrop-filter: blur(10px);
     }
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 10px;
-      background: #25D366;
-      color: white;
-      padding: 10px 10px;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      z-index: 999;
-    }
-
-    .whatsapp-float img {
-      height: 24px;
-      margin-right: 10px;
-    }
-
     footer {
       text-align: center;
       font-size: 14px;
       color: #aaa;
       padding: 20px;
-      background: #0f3 057;
+      background: #0f30 57;
     }
 
     @media (max-width: 768px) {
       .profile-pic-wrapper {
-        width: 300px;
+        width:220px;
         height: 180px;
       }
 
@@ -152,7 +131,7 @@
     <div class="profile-container">
       <div class="typewriter-text" id="typingText"></div>
       <div class="profile-pic-wrapper">
-        <img class="profile-pic" src="https://i.ibb.co/TBFk22q6/e8a34ebb01.jpg" alt="">
+        <img class="profile-pic" src="https://i.ibb.co/pHYssfp/219175b9f2.jpg" alt="">
       </div>
     </div>
   </header>
@@ -188,26 +167,24 @@
       </p>
     </div>
   </div>
+  
 
-  <a class="whatsapp-float" href="https://wa.me/8801607001300" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    Live Chat
-  </a>
-<div class="section" style="padding: 30px 20px; margin-bottom: 80px;">
-  <p style="
-    background-color: #ff0000;
-    padding: 40px;
-    border-radius: 12px;
-    font-size: 14px;
-    color: #ff000 0;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,255,204,0.1);">
-    Hi, our website is only for educational and training purposes. The lessons given on our website should only be tested on your system and network. If you test someone else's system and network without permission, we or our website will not be responsible.
-  </p>
-</div>
+  <div class="section" style="padding: 30px 20px; margin-bottom: 80px;">
+    <p style="
+      background-color: #ff0000;
+      padding: 40px;
+      border-radius: 12px;
+      font-size: 14px;
+      color: #ff000 0;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,255,204,0.1);">
+      Hi, our website is only for educational and training purposes. The lessons given on our website should only be tested on your system and network. If you test someone else's system and network without permission, we or our website will not be responsible.
+    </p>
+  </div>
+
   <footer>
     © 2025 | Developed by Mr Shakil Jack 
   </footer>
@@ -216,6 +193,7 @@
     const texts = [
       "I am Mr Shakil Jack",
       "Welcome to my website"
+          
     ];
     let textIndex = 0;
     let charIndex = 0;
@@ -240,4 +218,4 @@
     typeWriter();
   </script>
 </body>
-</html>
+          </html>
